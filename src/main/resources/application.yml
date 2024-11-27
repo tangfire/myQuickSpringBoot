@@ -1,0 +1,26 @@
+spring:
+  web:
+    resources:
+      static-locations: /upload/
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #  mvc:
+#    # 默认情况下，Spring MVC 处理静态资源的路径匹配模式是 /**，意味着所有静态资源请求都会被路由到静态资源目录下。
+#    static-path-pattern: /images/** # 你可以在此处指定不同的路径模式，如果不指定，默认是 /**
+
+  application:
+    # Spring Boot 应用的名称。你可以在监控工具、日志、配置等地方看到该名称。
+    name: myQuickSpringBoot
+
+  devtools:
+    restart:
+      # 控制 Spring DevTools 自动重启是否启用。默认为 true。设置为 false 时，将禁用自动重启功能。
+      enabled: true  # 如果设置为 false，Spring Boot 会禁用自动重启（即便是代码发生变化时，应用不会重新启动）
+
+      # 指定哪些额外的路径会被监控，如果这些路径中的文件发生变化，Spring Boot 会自动重启应用。
+      additional-paths: src/main/java  # 指定 Java 源代码路径（默认为 src/main/resources 目录），如果你在这个路径下进行修改，也会触发应用重启
+
+      # 设置哪些路径不应该触发应用的自动重启。此项可以排除不希望触发重启的文件或目录。
+      exclude: test/**  # 排除掉 test 目录下的文件，这样在开发时，测试代码的变化不会触发应用重启
