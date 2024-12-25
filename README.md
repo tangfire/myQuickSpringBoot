@@ -86,6 +86,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 # swagger
 
+参考文章: [Java21 + SpringBoot3整合springdoc-openapi，自动生成在线接口文档，支持SpringSecurity和JWT认证方式](https://blog.csdn.net/kingslave1/article/details/135947881)
+
 ## maven配置
 
 ```xml
@@ -135,6 +137,21 @@ public class SwaggerConfig {
  
 }
 ```
+
+## swagger2与swagger3常用注解对比
+
+|swagger2   |swagger3   | 注解位置                         |
+|---|---|------------------------------|
+| @Api  | @Tag(name = “接口类描述”)  | Controller 类                 |
+| @ApiOperation  | @Operation(summary =“接口方法描述”)  | Controller 方法                |
+| @ApiImplicitParams	  | @Parameters  | Controller 方法                |
+|  @ApiImplicitParam | @Parameter(description=“参数描述”)  | Controller 方法的 @Parameters 里 |
+| @ApiParam  | @Parameter(description=“参数描述”)  | Controller 方法的参数上            |
+| @ApiIgnore  | @Parameter(hidden = true) 或 @Operation(hidden = true) 或 @Hidden  | -                            |
+|  @ApiModel | @Schema  |  DTO类上                            |
+| @ApiModelProperty  | @Schema  |   DTO属性上                           |
+
+
 
 ## 示例
 
