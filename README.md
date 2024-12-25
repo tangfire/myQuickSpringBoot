@@ -11,6 +11,7 @@
 
 [【SpringBoot整合系列】SpringBoot3.x整合Swagger](https://blog.csdn.net/weixin_37833693/article/details/137050893)
 
+[Java21 + SpringBoot3整合springdoc-openapi，自动生成在线接口文档，支持SpringSecurity和JWT认证方式](https://blog.csdn.net/kingslave1/article/details/135947881)
 
 # 热部署
 
@@ -86,7 +87,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 # swagger
 
-参考文章: [Java21 + SpringBoot3整合springdoc-openapi，自动生成在线接口文档，支持SpringSecurity和JWT认证方式](https://blog.csdn.net/kingslave1/article/details/135947881)
 
 ## maven配置
 
