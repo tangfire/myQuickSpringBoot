@@ -105,6 +105,20 @@ public class LoginInterceptor implements HandlerInterceptor {
         </dependency>
 ```
 
+### 注意:
+
+`springdoc-openapi-starter-webmvc-ui`的版本需要与`spring-boot-starter-web`的版本对应,不然大概率报错,所以要根据
+`spring-boot-starter-web`的版本选择对应版本的`springdoc-openapi-starter-webmvc-ui`
+
+
+```xml
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+```
+
+
 ## 配置类
 
 ```java
